@@ -1,8 +1,10 @@
+"use client"
 import Wrapper from "../shared/Wrapper";
 import HeroPoster from '@/app/assets/images/hero.png';
 import HeroPoster2 from '@/app/assets/images/hero.png'
 import Image from "next/image";
 import Button from "../shared/Button";
+import Link from 'next/link'
 
 const Hero = () => {
     return (
@@ -19,12 +21,12 @@ const Hero = () => {
                         Consolidating Web 3.0, Metaverse, Artificial Intelligence (AI), Cloud, Edge, Ambient Computing/IoT, Network Automation, and Bioinformatics Technologies
                         </p>
                         </p>
-                     <div className="mt-5">
-                     <Button text={"Enroll Now"}/>
-                     </div>
-                     
-                      
-                    </div>
+                    
+                        <div className="mt-5">
+  <Link href={"https://portal.piaic.org/signup"}>
+    <Button text="Enroll Now" />
+  </Link>
+</div>                 </div>
 
                     {/* right side */}
                     <div className="flex-1">

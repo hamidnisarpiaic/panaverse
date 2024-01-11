@@ -11,7 +11,7 @@ function ProgramOutcome() {
             <Wrapper>
                 <div className="flex gap-x-8 items-center flex-col-reverse md:flex-row">
                     {/* Left - Image */}
-                    <div className='flex-1'>
+                    <div className='flex-1 hover:scale-110 duration-75'>
                         <Image src={Outcome} alt="Outcome-Image" width={500} height={500} />
                     </div>
 

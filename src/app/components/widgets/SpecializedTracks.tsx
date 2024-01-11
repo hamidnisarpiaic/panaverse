@@ -10,6 +10,7 @@ import amb from '@/app/assets/images/ambient.webp';
 import geno from '@/app/assets/images/genomics.webp';
 import net from '@/app/assets/images/network.webp';
 import Image from 'next/image';
+import Link from 'next/link';
 
 interface Quarter {
   header: string;
@@ -172,13 +173,18 @@ const SpecializedTracks: React.FC = () => {
         <div className="mt-10 flex flex-col-reverse lg:flex-row gap-x-6 gap-y-8">
           {/* Content Left */}
           <div className="basis-8/12">
-            <div className="shadow-xl sticky top-28 self-start rounded-xl border border-slate-200 py-8 px-8">
+            <div className="shadow-xl sticky top-60 self-start rounded-xl border border-slate-200 py-8 px-8">
               <h4 className="text-primary md:text-red-500 lg:text-blue-700 text-lg">Specialized Programme</h4>
               <h3 className="text-2xl font-semibold">{selectedItemsData?.header || ''}</h3>
               <p className="text-lg text-slate-600 mt-2 text-justify">{selectedItemsData?.description || ''}</p>
               <div className="flex items-center mt-4">
                 <button className="text-teal-700 text-xl underline flex">
-                  Learn more
+                <Link href={"/courses"}>
+                Learn more
+                        </Link>
+                  
+                  
+                  
                   <ArrowRightIcon width="10" height="13" className="ml-1 mt-2" />
                 </button>
               </div>
@@ -194,7 +200,7 @@ const SpecializedTracks: React.FC = () => {
           <div className="basis-4/12 px-4 py-6 bg-slate-100">
             {programsData.map((item, i) => (
               <div key={item.slug} onClick={() => setSelectedItems(item.slug)} className="flex gap-x-3 gap-y-2 mb-3 items-center cursor-pointer">
-                <div className="flex-shrink-0 h-24 w-36">
+                <div className="flex-shrink-0 h-24 w-36 hover:w-36 hover:scale-90">
                   <Image src={item.image} alt={item.header} className={'h-20 object-cover rounded-md'} />
                 </div>
                 <div>

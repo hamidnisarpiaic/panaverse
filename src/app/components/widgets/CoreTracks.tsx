@@ -2,7 +2,7 @@ import React from "react";
 import Wrapper from "../shared/Wrapper";
 import Button from "../shared/Button";
 import QuarterBox from "../shared/QuarterBox";
-
+import Link from "next/link";
 const CoreTrackData = [
   {
     header: "Quarter 1",
@@ -35,8 +35,12 @@ const CoreTracks = () => {
         </div>
 
         <div className="mt-4">
-          <Button text={"learn More"} />
-        </div>
+  <button className="text-teal-700 text-xl underline flex">
+    <a href="https://www.piaic.org/" target="_blank" rel="noopener noreferrer">
+      Learn more
+    </a>
+  </button>
+</div>
         
         {/* boxes and data fetching from array through map method */}
         {/* to make responsive we will use flex flex-col md:flex-row 

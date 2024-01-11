@@ -2,12 +2,17 @@ import CoreTracks from "./components/widgets/CoreTracks"
 import Hero from "./components/widgets/Hero"
 import SpecializedTracks from "./components/widgets/SpecializedTracks"
 import ProgramOutcome from "./components/widgets/ProgramOutcome"
+import Footer from "./components/shared/Footer"
+import Wrapper from "./components/shared/Wrapper"
 export default function Home() {
   return (
     <>
       <main>
-        {/* Hero Section */}
-        <Hero />
+    <Wrapper>
+
+
+  {/* Hero Section */}
+  <Hero />
         {/* CoreTracks Section */}
          <CoreTracks/> 
 
@@ -16,9 +21,17 @@ export default function Home() {
 {/* ProgramOutcome Section  */}
 <ProgramOutcome/>
 
+<Footer/>
 
+    </Wrapper>
+
+      
       </main>
 
     </>
   )
 }
+
+
+
+
